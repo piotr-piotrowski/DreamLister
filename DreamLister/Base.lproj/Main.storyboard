@@ -13,7 +13,7 @@
         <!--DreamLister-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="MainVC" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="MainVC" customModule="DreamLister" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -34,11 +34,11 @@
                                 </segments>
                                 <color key="tintColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                             </segmentedControl>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="150" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="LaL-JK-cTe">
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="150" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="LaL-JK-cTe">
                                 <rect key="frame" x="16" y="132" width="343" height="535"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="ItemCell" rowHeight="150" id="jsV-ce-XRp" customClass="ItemCell" customModule="ItemCell">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="ItemCell" rowHeight="150" id="jsV-ce-XRp" customClass="ItemCell" customModule="DreamLister">
                                         <rect key="frame" x="0.0" y="28" width="343" height="150"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="jsV-ce-XRp" id="92D-kS-EBL">
@@ -46,10 +46,10 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="d0U-ZY-KM4">
-                                                    <rect key="frame" x="0.0" y="0.0" width="343" height="149"/>
+                                                    <rect key="frame" x="0.0" y="0.0" width="343" height="150"/>
                                                     <subviews>
                                                         <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="tesla" translatesAutoresizingMaskIntoConstraints="NO" id="RvC-Qe-Z4b">
-                                                            <rect key="frame" x="0.0" y="24.5" width="100" height="100"/>
+                                                            <rect key="frame" x="0.0" y="25" width="100" height="100"/>
                                                             <constraints>
                                                                 <constraint firstAttribute="height" constant="100" id="42w-BM-yHm"/>
                                                                 <constraint firstAttribute="width" constant="100" id="p0l-BB-MCb"/>
@@ -74,7 +74,7 @@
                                                             <nil key="highlightedColor"/>
                                                         </label>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Someday my dreams will come true and I will own this car. Just you wait." lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="02j-ox-XDa">
-                                                            <rect key="frame" x="108" y="66" width="227" height="75"/>
+                                                            <rect key="frame" x="108" y="66" width="227" height="76"/>
                                                             <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="17"/>
                                                             <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                                                             <nil key="highlightedColor"/>
@@ -109,6 +109,9 @@
                                             </constraints>
                                         </tableViewCellContentView>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="boolean" keyPath="materialDesign" value="YES"/>
+                                        </userDefinedRuntimeAttributes>
                                         <connections>
                                             <outlet property="details" destination="02j-ox-XDa" id="oDZ-qk-hhr"/>
                                             <outlet property="price" destination="fo5-6I-h6h" id="7LQ-Ud-jyM"/>
